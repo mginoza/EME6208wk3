@@ -1,0 +1,311 @@
+/********************
+ 	   GENERAL
+********************/
+:root {
+	--color-accent: #6484cd;
+	--color-accent-dark: #546dba;
+	--hover-light-gray: #e7e7e7;
+	--hover-dark: #D8DBDE;
+}
+html {
+	height: 100%;
+}
+body{
+		font-family: 'Nunito', Arial, sans-serif;
+		background-color:#E2EBED;
+		margin: 0;
+		/*background-color: lightcoral;*/
+		background: #000428;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to bottom, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+	/*#footer{
+		height:30px;
+		vertical-align:middle;
+		text-align:right;
+		clear:both;
+		padding-right:3px;
+		background-color:#317082;
+		margin-top:2px;
+		width:790px;
+	}
+	#footer form{
+		margin:0px;
+		margin-top:2px;
+	}*/
+	lottie-player.bubbles {
+	height: 99vh;
+	position: absolute;
+	z-index: -10;
+	opacity: 1;
+	mix-blend-mode: plus-lighter;
+	}
+	h1 {
+		text-align: center;
+		font-size: 1.75em;
+		margin-bottom: 5px;
+	}
+	h4 {
+		margin-top: 0px;
+		text-align: center;
+		color: white;
+	}
+	p {
+		font-size: 12px;
+	}
+	.colorSalmon {
+		color: salmon;
+	}
+	.colorWhite {
+		color: white;
+	}
+	.displayNone {
+		display: none!important;
+	}
+	.displayNoneTest{
+		display: none;
+	}
+/********************
+	   HEADER
+********************/
+	#titleArea {
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+/********************
+	   BODY
+********************/
+#dhtmlgoodies_dragDropContainer{ /* Main container for this script */
+	width:790px;
+	/*height:770px;*/
+	padding: 30px 20px;
+	margin: 0 auto; /* center */
+	border: none;
+	border-radius: 10px;
+	background-color:#FFF;
+	-moz-user-select:none;
+	overflow: auto;
+	display: block;
+}
+#dhtmlgoodies_dragDropContainer_Section { 
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+}
+
+/*************************
+  TABLE GENERAL STYLING
+*************************/
+#dhtmlgoodies_listOfItems div ul, #dhtmlgoodies_mainContainer div ul{ /* Left column <ul> */
+	/*margin-left:10px;*/
+	margin: 0 auto;
+}
+/********************
+	 1st COLUMN
+********************/
+#dhtmlgoodies_listOfItems div p {	/* Heading above left column */
+	margin: 0px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	background-color: white;
+}
+#dhtmlgoodies_listOfItems{	/* Left column "Available students" */
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+	border-right: 0.5px solid #004e92;
+	margin-right: 10px;
+	
+	/* CSS HACK */
+	width: 180px;	/* IE 5.x */
+	width/* */:/**/160px;	/* Other browsers */
+	width: /**/160px;
+			
+}
+#dhtmlgoodies_listOfItems ul{	/* Left(Sources) column <ul> */
+	/*height:560px;*/
+}
+	
+#dhtmlgoodies_listOfItems > div{
+	/*border:1px solid #999;*/
+}
+
+/*************************
+ DRAG N DROP ITEMS/BOXES
+*************************/
+#dhtmlgoodies_dragDropContainer ul {	/* General rules for all <ul> */
+	margin: 0px 0px 0px auto;
+	padding: 0px;
+}
+
+#dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination {	/* Movable items, i.e. <LI> */
+	padding: 10px 0;
+	/*padding-left: 20px;*/
+	margin: 5px 0;
+	height:15px;
+	border: none;
+	border-radius: 2px;
+
+	list-style-type:none;
+	font-size:13px;
+	line-height:15px;
+	text-align: center; /* WIP  */
+	background-color: var(--color-accent);
+	color: white;
+	cursor:pointer;
+}
+#dhtmlgoodies_dragDropContainer li:hover,#dragContent li:hover,#indicateDestination:hover {
+	background-color: var(--color-accent-dark);
+}
+/*?*/
+li#indicateDestination{	 /*Box indicating where content will be dropped - i.e. the one you use if you don't use arrow */
+	border:1px dotted #600;	
+	background-color:#FFF;
+}
+#dhtmlgoodies_dragDropContainer ul li.correctAnswer, #dhtmlgoodies_dragDropContainer ul li.wrongAnswer {
+	text-align: center;
+	color:#FFF;
+}
+#dhtmlgoodies_dragDropContainer ul li.correctAnswer {	/* Correctly moved item */
+	background-color: var(--color-accent);
+	width: 150px;
+}
+#dhtmlgoodies_dragDropContainer ul li.wrongAnswer{	/* Item moved to wrong box */
+	background-color:red;
+	width: 150px;
+}
+/********************
+  CATEGORY COLUMNS
+********************/
+#dhtmlgoodies_listOfItems div p, #dhtmlgoodies_mainContainer div p{	/* Heading above left column */
+	margin: 0px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	color: var(--color-accent);
+}
+div#dhtmlgoodies_mainContainer{/*Right column DIV */	 
+	/*width:590px;
+	float:left;	*/
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+#dhtmlgoodies_mainContainer div{	/* Parent <div> of small boxes */
+	/*float:left;*/
+	margin-right:10px;
+	margin-bottom:10px;
+	margin-top:0px;
+	/*border:1px solid var(--color-accent);*/
+	background-color: var(--hover-light-gray);
+	border-radius: 2px;
+
+	/* CSS HACK */
+	width: 99%;	/* IE 5.x */
+	width/* */:/**/99%;	/* Other browsers */
+	width: /**/99%;
+}
+#dhtmlgoodies_mainContainer ul{	/* Small box in right column ,i.e <ul> */
+	/*width:152px;*/
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	height:80px;	
+	border:0px;	
+	margin-bottom:0px;
+	overflow:hidden;
+}
+#dhtmlgoodies_mainContainer ul li {
+	margin: 0 5px;
+}
+
+/********************
+	INTERACTIVE
+********************/
+/*#dhtmlgoodies_dragDropContainer .mouseover {	 Mouse over effect DIV box in right column 
+	border: 1px solid white;
+}*/
+#dhtmlgoodies_dragDropContainer #dhtmlgoodies_listOfItems .mouseover {
+	border: none;
+}
+#dhtmlgoodies_dragDropContainer #dhtmlgoodies_listOfItems .mouseover ul li{
+	background-color: var(--hover-dark);
+}
+#dhtmlgoodies_dragDropContainer #dhtmlgoodies_mainContainer .mouseover {
+	border: none;
+	background-color: var(--hover-dark);
+}
+#dragContent{	/* Drag container */
+	position:absolute;
+	width:150px;
+	height:15px;
+	display:none;
+	margin:0px;
+	padding:0px;
+	z-index:2000;
+}
+
+#dragDropIndicator{	/* DIV for the small arrow */
+	position:absolute;
+	width:7px;
+	height:10px;
+	display:none;
+	z-index:1000;
+	margin:0px;
+	padding:0px;
+}
+
+/********************
+	CORRECT MSG
+********************/
+#correctMessage {
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+
+	background: #000428;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	opacity: .9;
+	animation-duration: 300ms;
+}
+#correctMessage > div {
+	margin-bottom: 15vh;
+	text-align: center;
+	color: white;
+}
+#correctMessage > div button {
+	padding: 10px 30px;
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	background-color: white;
+	color: var(--color-accent);
+	cursor: pointer;
+}
+#correctMessage > div button:hover {
+	background-color: var(--color-accent);
+	color: white;
+}
+#correctMessage > div button.buttonReview {
+	background-color: transparent;
+	color: white;
+	text-decoration: underline;
+}
+#correctMessage > div button.buttonReview:hover {
+	color: var(--color-accent);
+}
+lottie-player.jelly {
+	width: 150px;
+	margin: -30px auto!important;
+	padding-top: -50px;
+	bottom: -30px;
+}
